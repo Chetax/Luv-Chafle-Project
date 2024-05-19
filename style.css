@@ -1,0 +1,23 @@
+.nav-item:hover {
+   background-color: white;
+   border-radius: 12px;
+   box-shadow: 1px 1px black;
+  
+}
+.nav-item{
+   
+    font-size: 22px;
+    padding: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.img-hover{
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+}
+.img-hover:hover {
+    filter: grayscale(0%);
+  }
