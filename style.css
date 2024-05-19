@@ -1,3 +1,4 @@
+
 .nav-item:hover {
     background-color: white;
     border-radius: 12px;
@@ -21,5 +22,11 @@
  .img-hover:hover {
      filter: grayscale(0%);
  }
+ @media screen and (max-width: 992px) and (min-width: 768px) {
+    #img3 {
+        width: 10%;
+        max-width: 100em; /* or whatever value you want */
+    }
+}
 
  
