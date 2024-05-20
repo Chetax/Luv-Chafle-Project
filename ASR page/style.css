@@ -1,3 +1,29 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    background: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
 .navbar.bg-transparent {
     background-color: transparent;
 }
@@ -23,69 +49,48 @@
      justify-content: center;
  }
  
- 
- 
-.img-hover {
-    filter: grayscale(100%);
-    transition: filter 0.5s ease;
-}
 
-.img-hover:hover {
-    filter: grayscale(0%);
-}
-
-.img-container {
+.voice_to_text {
     display: flex;
-    justify-content: space-between; 
-    flex-wrap: nowrap; 
-}
-
-.img-container .img-wrapper {
-    width: 18%; 
-    position: relative;
-    margin: 0 5px; 
-}
-
-.img-container img {
-    width: 100%; 
-    height: auto; 
-    transition: filter 0.5s ease; 
-}
-
-.overlay {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    color: white;
+    max-width: 600px;
+    text-align: center;
+    margin: 10px auto 20px;
 }
 
-@media screen and (max-width: 992px) {
-    .img-container .img-wrapper {
-        width: 45%; /* Adjust as needed for smaller screens */
-        margin: 5px; 
-    }
+h1 {
+    color: #000;
+    font-size: 4em;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    .img-container {
-        flex-wrap: wrap; /* Allow images to wrap to the next line on very small screens */
-        justify-content: center; 
-    }
-    .img-container .img-wrapper {
-        width: 90%; /* Full width on very small screens */
-        margin: 5px 0; 
-    }
+#convert_text {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    resize: none;
+    padding: 10px;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #0ea4da;
+    border: none;
+    color: #fff;
+    font-size: 1.125em;
+    cursor: pointer;
+    border-radius: 5px;
 }
  
- 
- footer {
+footer {
     width: 100%;
     background-color: #1953c7;
     padding: 1rem 10vw;
-    position: absolute;
-    bottom: 0%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -124,4 +129,3 @@
     font-size: 1.25rem;
     color: white;
 }
-

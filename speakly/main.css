@@ -1,0 +1,479 @@
+/* GOOGLE FONT - INTER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    width: 100dvw;
+    max-width: 100dvw;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+.navbar.bg-transparent {
+    background-color: transparent;
+}
+.navbar.bg-blue {
+    background-color: #1953c7;
+}
+.navbar-nav .nav-link {
+    font-family: Poppins;
+    color: blue; /* Initial text color when background is transparent */
+}
+
+
+.navbar.bg-blue .nav-link:hover {
+    color: violet; /* Hover effect when background is blue */
+}
+.nav-item {
+    font-size: 22px;
+    padding: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CONTAINER STYLES */
+
+.containered {
+    width: 1440px;
+}
+
+@media screen and (max-width: 1536px) {
+    .containered {
+        width: 1200px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .containered {
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .containered {
+        width: 720px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containered {
+        width: 540px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containered {
+        width: 95dvw;
+    }
+}
+
+
+/* MAIN COMPONENT */
+
+main {
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/* NAVBAR */
+.navbar.bg-transparent {
+    background-color: transparent;
+}
+.navbar.bg-blue {
+    background-color: #1953c7;
+}
+.navbar-nav .nav-link {
+    font-family: Poppins;
+    color: inherit; /* Ensure the initial color is inherited */
+}
+.navbar-nav .nav-link:hover {
+    color: violet;
+}
+
+/* HERO */
+
+.heroSection {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #5871C4, #ECD1E1);
+    padding-top: 10rem;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heroHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 4rem;
+}
+
+.heroTitle {
+    font-size: 4rem;
+    font-weight: 700;
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+
+.heroSubtitle {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: white;
+}
+
+.heroButton {
+    padding: 0.75rem 1rem;
+    background-color: #1654aa;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.heroImage {
+    width: 100%;
+    object-fit: cover;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+/* FEATURES SECTION */
+.featuresSection {
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+}
+
+.featureTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.featureCardContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 7.5vw;
+}
+
+.featureCard {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+}
+
+.featureCardInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.featureCardImage {
+    width: 100%;
+    height: 100%;
+}
+
+.featureImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featureCardTitle {
+    font-size: 4.75rem;
+    font-weight: 500;
+}
+
+.featureCardText {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.learnMore {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.learnMore img {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: 0.2rem;
+    transform: translateY(0.1rem);
+}
+
+.featureSlider {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    grid-template-areas: "slider1 slider2 slider3";
+}
+
+.featureSliderBar {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(to right, #5871C4, #ECD1E1);
+    z-index: 5;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+.featureSliderLine {
+    width: 100%;
+    height: 2px;
+    background-color: #DCDCDC;
+    border-radius: 0.25rem;
+}
+
+.slider1 {
+    grid-area: slider1;
+}
+
+.slider2 {
+    grid-area: slider2;
+}
+
+.slider3 {
+    grid-area: slider3;
+}
+
+.page1 {
+    transform: translateX(0);
+}
+
+.page2 {
+    transform: translateX(100%);
+}
+
+.page3 {
+    transform: translateX(200%);
+}
+
+/* FAQ SECTION */
+.faqSection {
+    padding: 5rem 7.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.faqHeading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+}
+
+.faqContainer {
+    background: #f6eaf2;
+    width: 100%;
+    padding: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faqCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 12px;
+}
+
+.faqTitleDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.faqTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5A76C7;
+}
+
+.faqButton {
+    background-color: white;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    width: 2.25rem;
+    height: 2.25rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faqArrow {
+    object-fit: contain;
+    transition: all 0.3s ease-in-out;
+    transform: rotate(0deg);
+    color: #1654aa;
+}
+
+.faqContent {
+    height: 0px;
+    width: 100%;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0;
+}
+
+.faqText {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #939EB4;
+}
+
+.faqCard.open .faqContent {
+    height: auto;
+    margin-top: 1rem;
+}
+
+.faqCard.open .faqButton {
+    background-color: #1654aa;
+}
+
+.faqCard.open .faqArrow {
+    transform: rotate(90deg);
+    color: white;
+}
+
+
+/* FOOTER SECTION */
+footer {
+    width: 100%;
+    background-color: #1953c7;
+    padding: 1rem 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.footerLogoDiv {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footerLogo {
+    width: 2rem;
+    height: 2rem;
+}
+
+.footerTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.footerText {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+
+.footerSocials {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.footerSocials i {
+    font-size: 1.25rem;
+    color: white;
+}
+
+
+/* CUSTOM STYLES */
+
+/* CUSTOM BUTTON */
+.button-name {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-name:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-name:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-name:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
