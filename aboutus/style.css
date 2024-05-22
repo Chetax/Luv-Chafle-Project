@@ -1,13 +1,29 @@
-.navbar.bg-transparent {
-    background-color: transparent;
-}
+
 .navbar.bg-blue {
     background-color: #1953c7;
+}
+
+.navbar.bg-transparent {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .navbar-nav .nav-link {
     font-family: Poppins;
     color: blue; /* Initial text color when background is transparent */
 }
+.navbar.bg-blue .nav-link:hover {
+    color: violet; /* Hover effect when background is blue */
+}
+.nav-item {
+    font-size: 22px;
+    padding: 10px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 
 .navbar.bg-blue .nav-link:hover {
