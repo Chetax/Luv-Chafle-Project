@@ -122,3 +122,72 @@ footer {
     color: white;
 }
 
+
+@media screen and (max-width: 768px) {
+    .containered {
+        width: 540px;
+    }
+    .heroTitle {
+        font-size: 2.75rem;
+    }
+    .heroSubtitle {
+        font-size: 1.65rem;
+    }
+    .heroImage {
+        border-radius: 0;
+        width: 200%;
+    }
+    .featureCard {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .featureCardImage {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+        grid-row-start: 1;
+    }
+    .faqSection {
+        padding: 3rem 2vw;
+    }
+    .faqContainer {
+        padding: 1.1rem;
+        gap: 1rem;
+    }
+    .faqCard {
+        padding: 1rem 1.5rem;
+    }
+    .faqTitle {
+        font-size: 1.1rem;
+    }
+    .faqText {
+        font-size: 1rem;
+    }
+    .featuresSection {
+        padding: 3rem 0;
+        gap: 4rem;
+    }
+    .footerTitle {
+        font-size: 1.1rem;
+    }
+    footer {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "footerLogoDiv footerSocials" "footerText footerText";
+    }
+    .footerLogoDiv {
+        grid-area: footerLogoDiv;
+        justify-content: flex-start;
+    }
+    .footerSocials {
+        grid-area: footerSocials;
+        justify-content: flex-end;
+    }
+    .footerText {
+        grid-area: footerText;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}
