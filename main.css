@@ -21,6 +21,8 @@ body::-webkit-scrollbar {
 }
 .navbar.bg-transparent {
     background-color: transparent;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 .navbar.bg-blue {
     background-color: #1953c7;
@@ -48,36 +50,6 @@ body::-webkit-scrollbar {
 
 .containered {
     width: 1440px;
-}
-
-@media screen and (max-width: 1536px) {
-    .containered {
-        width: 1200px;
-    }
-}
-
-@media screen and (max-width: 1366px) {
-    .containered {
-        width: 1000px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .containered {
-        width: 720px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .containered {
-        width: 540px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .containered {
-        width: 95dvw;
-    }
 }
 
 
@@ -148,6 +120,8 @@ main {
     font-size: 1.75rem;
     font-weight: 500;
     color: white;
+    text-align: center;
+    width: 90%;
 }
 
 .heroButton {
@@ -182,6 +156,7 @@ main {
     font-size: 2.5rem;
     font-weight: 700;
     color: black;
+    text-align: center;
 }
 
 .featureCardContainer {
@@ -324,8 +299,8 @@ main {
 }
 
 .faqTitleDiv {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2.25rem;
     align-items: center;
     gap: 1rem;
 }
@@ -334,6 +309,7 @@ main {
     font-size: 1.5rem;
     font-weight: 700;
     color: #5A76C7;
+    margin: 0;
 }
 
 .faqButton {
@@ -476,4 +452,179 @@ footer {
 .button-name:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
+}
+
+
+/* RESPONSIVE STYLES */
+
+@media screen and (max-width: 1536px) {
+    .containered {
+        width: 1200px;
+    }
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+    .heroSubtitle {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .containered {
+        width: 1000px;
+    }
+    .heroTitle {
+        font-size: 3.25rem;
+    }
+    .heroSubtitle {
+        font-size: 1.85rem;
+    }
+    .featureTitle {
+        font-size: 2.25rem;
+    }
+    .featureCardTitle {
+        font-size: 4rem;
+    }
+    .featureCardText {
+        font-size: 1.25rem;
+    }
+    .featureCardContainer {
+        padding: 0 5vw;
+    }
+    .faqHeading {
+        font-size: 2.25rem;
+    }
+    .faqSection {
+        padding: 3rem 5vw;
+    }
+    .faqTitle {
+        font-size: 1.4rem;
+    }
+    .faqContainer {
+        padding: 3rem;
+    }
+    .faqText {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .containered {
+        width: 720px;
+    }
+    .heroTitle {
+        font-size: 3rem;
+    }
+    .heroSubtitle {
+        font-size: 1.75rem;
+    }
+    .featureCardTitle {
+        font-size: 3rem;
+    }
+    .featureCardText {
+        font-size: 1.25rem;
+    }
+    .featureCardContainer {
+        padding: 0 3vw;
+    }
+    .faqSection {
+        padding: 2rem 3vw;
+    }
+    .faqTitle {
+        font-size: 1.3rem;
+    }
+    .faqContainer {
+        padding: 2rem;
+    }
+    .faqText {
+        font-size: 1.15rem;
+    }
+    .faqCard {
+        padding: 1rem 1.5rem;
+    }
+    .featuresSection {
+        padding: 5rem 0;
+        gap: 6rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containered {
+        width: 540px;
+    }
+    .heroTitle {
+        font-size: 2.75rem;
+    }
+    .heroSubtitle {
+        font-size: 1.65rem;
+    }
+    .heroImage {
+        border-radius: 0;
+        width: 200%;
+    }
+    .featureCard {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .featureCardImage {
+        width: 100%;
+        aspect-ratio: 4/3;
+        border-radius: 12px;
+        grid-row-start: 1;
+    }
+    .faqSection {
+        padding: 3rem 2vw;
+    }
+    .faqContainer {
+        padding: 1.1rem;
+        gap: 1rem;
+    }
+    .faqCard {
+        padding: 1rem 1.5rem;
+    }
+    .faqTitle {
+        font-size: 1.1rem;
+    }
+    .faqText {
+        font-size: 1rem;
+    }
+    .featuresSection {
+        padding: 3rem 0;
+        gap: 4rem;
+    }
+    .footerTitle {
+        font-size: 1.1rem;
+    }
+    footer {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "footerLogoDiv footerSocials" "footerText footerText";
+    }
+    .footerLogoDiv {
+        grid-area: footerLogoDiv;
+        justify-content: flex-start;
+    }
+    .footerSocials {
+        grid-area: footerSocials;
+        justify-content: flex-end;
+    }
+    .footerText {
+        grid-area: footerText;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .containered {
+        width: 95dvw;
+    }
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+    .heroSubtitle {
+        font-size: 1.55rem;
+    }
 }
